@@ -1,0 +1,27 @@
+// User variables:
+$default-font: 'Opensans', sans-serif
+$heading-font: 'GothamPro', sans-serif
+$accent: #2383c6
+$accent2: #ffcc00
+$text: #252525
+$arrow: #9D9E9D
+$text-gray: #898989
+$accent-line: #E4E9F6
+$spacing: .19em
+$trans3: all 0.3s ease
+$trans2: all .25s ease
+=transition($sel, $time)
+	transition: $sel $time ease
+=border($color)
+	border: 1px solid $color
+=transform($tx, $ty)
+	transform: translate3d($tx, $ty,0)
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// // Breakpoints mixin settings (node_modules/bootstrap/scss/mixins/_breakpoints.scss)
+// // Example: +media-breakpoint-down(xs) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
+// // Default variables: node_modules/bootstrap/scss/_variables.scss
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
