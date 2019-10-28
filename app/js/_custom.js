@@ -1,7 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	
-
+	$('.zoom-gallery').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			closeOnContentClick: false,
+			closeBtnInside: false,
+			mainClass: 'mfp-with-zoom mfp-img-mobile',
+			image: {
+				verticalFit: true,
+			},
+			gallery: {
+				enabled: true,
+				tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+			},
+			zoom: {
+				enabled: true,
+				duration: 300, // don't foget to change the duration also in CSS
+			}
+		});
+	})
 });
 
 var inputs = Array.prototype.slice.call(document.querySelectorAll('.phone-mask'));

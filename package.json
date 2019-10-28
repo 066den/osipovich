@@ -22,6 +22,11 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^1.0.4",
+		"jquery": "^3.4.1",
 		"normalize.css": "^8.0.1"
+	},
+	"dependencies": {
+		"magnific-popup": "^1.1.0",
+		"npm": "^6.12.0"
 	}
 }
