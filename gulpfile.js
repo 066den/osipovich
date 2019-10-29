@@ -46,6 +46,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'node_modules/owl.carousel/dist/owl.carousel.min.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])

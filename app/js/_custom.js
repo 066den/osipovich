@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	
 	$('.zoom-gallery').each(function() {
 		$(this).magnificPopup({
 			delegate: 'a',
@@ -20,6 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 	})
+
+	$('.ajax-popup').magnificPopup({
+		type: 'ajax',
+		alignTop: true,
+		overflowY: 'scroll',
+		callbacks: {
+    	ajaxContentAdded: function() {
+   			$(this.content).find('.project-carousel').owlCarousel({
+					items: 1
+				})
+	
+			}
+    },
+	});
+
 });
 
 var inputs = Array.prototype.slice.call(document.querySelectorAll('.phone-mask'));
@@ -55,3 +71,33 @@ inputs.forEach( function(input) {
 	input.addEventListener("blur", mask, false);
 	input.addEventListener("keydown", mask, false)
 })
+
+function initMap(coords) {
+	var coord = {};
+	var coord_centr = {};
+	coord.lat = coords[0];
+	coord.lng = coords[1];
+	coord_centr.lat = coords[0];
+	coord_centr.lng = coords[1] - 0.003000;
+	
+	var image=new google.maps.MarkerImage(
+		'/img/marker.png',
+		new google.maps.Size(40,65),
+		new google.maps.Point(0,0),
+		new google.maps.Point(38,56)
+		);
+	var map = new google.maps.Map(document.getElementById("map-canvas"), {
+		zoom: 17,
+		center: coord_centr,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		scrollwheel:false,
+		disableDefaultUI: true,
+	});
+
+	var marker = new google.maps.Marker({
+		position: coord,
+		map: map, 
+		icon: image,
+		//animation: google.maps.Animation.BOUNCE
+	});
+};

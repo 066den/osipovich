@@ -109,7 +109,10 @@ p
 		display: inline-block
 .hidden
 	display: none
-
+.mb-60
+	margin-bottom: 60px
+.mb-40
+	margin-bottom: 40px
 // Custom Sass / Remove before use
 
 .container, .container-fluid
@@ -211,17 +214,16 @@ p
 	.address
 		font-size: .875em
 		line-height: 1.2
-	.phone
-		a
-			color: $text
-			font-family: GothamPro
-			font-size: 1.5em
+.phone
+	a
+		color: $text
+		font-family: GothamPro
+		font-size: 1.5em
 
 //SLIDER//
 .heading
 	padding-top: 260px
 	padding-bottom: 130px
-	background-image: url(../img/header.png)
 	background-repeat: no-repeat
 	background-position: top center
 	.item
@@ -260,10 +262,11 @@ p
 .content-wrapper
 	+media-breakpoint-down(md)
 		padding-top: 0
-	
+.section
+	position: relative	
 .advantages
 	background-color: #EBF6FA
-	padding-bottom: 60px
+	padding-bottom: 160px
 	position: relative
 	z-index: -1
 	margin-top: -175px
@@ -341,7 +344,15 @@ p
 			top: 100%
 			left: 50%
 			+transform(-50%, 0)
+.triple-form
+	background-repeat: no-repeat
+	background-position: top center
+	//background-color: #ebf6fa
+	margin-top: -490px
+	padding-top: 410px
+	padding-bottom: 120px
 .products
+	
 	.thumb
 		position: relative
 		box-shadow: 0 5px 5px rgba(#0a0b0c, .09)
@@ -414,9 +425,10 @@ p
 			font-weight: bold
 
 .related
-	padding: 80px 0
-	background-position: bottom center
-	background-repeat: no-repeat
+	padding: 60px 0 0
+	
+	.related-wrap
+		
 	.thumb
 		box-shadow: 0 5px 5px rgba(#000, .09)
 	.item-content
@@ -430,6 +442,9 @@ p
 		text-decoration: underline
 		line-height: 1.2
 		min-height: 38px
+.home-gallery
+	padding: 60px 0
+
 .zoom-gallery
 	a
 		background-color: #201919
@@ -447,7 +462,16 @@ p
 		color: #fff
 		line-height: 1.2
 		margin-bottom: 42px
-
+		font-weight: normal
+.certificate
+	padding: 60px 0 150px
+	.zoom-gallery
+		margin-bottom: 100px
+	.triple
+		position: absolute
+		left: 50%
+		+transform(-50%, 0)
+		z-index: 1
 .cer-item
 	text-align: center
 	.thumb
@@ -465,11 +489,14 @@ p
 			background-image: url(../img/ramka.png)
 			background-size: 100% 100%
 
-
 .feedback
+	padding: 170px 0 110px
+	background-position: bottom center
+	background-repeat: no-repeat
 	.h6
 		font-size: 1.3125em
 		margin-bottom: 0
+		font-weight: normal
 	.h2
 		font-size: 1.625em
 		font-style: italic
@@ -536,13 +563,20 @@ p
 		.contact-block
 			margin-left: -156px
 .footer
-	padding: 25px 0
+	padding: 15px 0
 	.copyright
 		color: #898989
 		font-size: .625em
+		max-width: 690px
 	.privaci
 		font-size: .75em
 		text-align: right
+	.logo
+		width: 195px
+		padding-right: 15px
+	.phone
+		a 
+			font-size: 1.25em
 
 //BUTTON//
 .btn
@@ -595,7 +629,6 @@ p
 		color: #fff
 	&:active
 		background-color: darken($accent2, 5%)
-		margin-bottom: 3px
 		&:after
 			box-shadow: 0 0px 0 #DBBC2A
 	
@@ -676,16 +709,34 @@ form
 		line-height: 1.2
 .contact-form
 	form
+		position: relative
 		background: #fff
 		max-width: 460px
 		margin: 0 auto
-		padding: 20px 30px
-		border-radius: 8px
+		padding: 25px 30px
+		border-radius: 6px
 		box-shadow: 1px 1px 24px rgba(#000, .11)
+		z-index: 10
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			+transform(-50%, 0)
+			background: #fff
+			height: 15px
+			width: 93%
+			border-radius: 0 0 6px 6px
+			box-shadow: 1px 1px 24px rgba(#000, .11)
+			z-index: 1
+		&:before
+			height: 30px
+			width: 90%
 	.btn.btn-lg
 		border-radius: 10px
 		&:after, &:before
 			border-radius: 10px
+
 .triple
 	box-shadow: 1px 1px 24px rgba(#000, .11)
 	border-radius: 10px
@@ -869,8 +920,9 @@ select
 	.form-control
 		padding: 12px
 .white-popup-block
-	max-width: 800px
+	max-width: 1170px
 	margin: 40px auto
+	padding: 30px
 	position: relative
 	background: #fff
 	form
