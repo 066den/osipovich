@@ -165,7 +165,6 @@ p
 		grid-template-columns: 35% 63%
 	&.col-7-5
 		grid-template-columns: 63% 35%
-	
 	&.acc
 		align-content: center
 	&.aic
@@ -174,18 +173,19 @@ p
 		grid-gap: 30px
 	&.gap-40
 		grid-gap: 40px
-	
 	+media-breakpoint-down(md)
 		&.col-4-auto, &.col-3-auto
 			grid-template-columns: repeat(2, 1fr)
 	+media-breakpoint-down(sm)
-		&.col-1-2
-			display: block
-
+		display: block
+		&.col-4-auto, &.col-3-auto
+			display: grid
 	+media-breakpoint-down(xs)
 		display: block
 		>div, >a
 			padding-bottom: $gutter
+		&.col-4-auto, &.col-3-auto
+			display: block
 		
 .flex
 	display: flex
@@ -214,6 +214,9 @@ p
 	.address
 		font-size: .875em
 		line-height: 1.2
+	+media-breakpoint-down(md)
+		.flex
+			flex-wrap: wrap
 .phone
 	a
 		color: $text
@@ -241,7 +244,7 @@ p
 		margin-bottom: 30px
 		&.btn-lg
 			font-size: 1.25em
-			padding: 18px 30px
+			padding: 18px 65px
 			border-radius: 35px
 			&:after, &:before
 				border-radius: 35px
@@ -257,7 +260,11 @@ p
 	p
 		max-width: 545px
 		margin: 0 auto
-
+	+media-breakpoint-down(lg)
+		padding-top: 190px
+		padding-bottom: 20px
+		.item
+			margin-bottom: 200px
 //CONTENT//
 .content-wrapper
 	+media-breakpoint-down(md)
@@ -270,6 +277,9 @@ p
 	position: relative
 	z-index: -1
 	margin-top: -175px
+	+media-breakpoint-down(lg)
+		margin-top: 0
+		padding-top: 20px
 .advantage
 	position: relative
 	background-repeat: no-repeat
@@ -344,6 +354,22 @@ p
 			top: 100%
 			left: 50%
 			+transform(-50%, 0)
+	+media-breakpoint-down(sm)
+		padding: 0
+		.elips
+			display: none
+		.adv-items
+			position: relative
+			.row
+				&:nth-child(1)
+					padding: 0 0 100px
+				&:nth-child(2)
+					padding: 0 0 100px
+				&:nth-child(3)
+					padding: 10px 0
+		.item
+			span
+				min-width: auto
 .triple-form
 	position: relative
 	background-repeat: no-repeat
@@ -352,6 +378,9 @@ p
 	margin-top: -488px
 	padding-top: 410px
 	padding-bottom: 120px
+	+media-breakpoint-down(sm)
+		margin-top: 0
+		padding-top: 400px
 .video-block
 	position: absolute
 	top: 25px
@@ -429,7 +458,17 @@ p
 		.price
 			font-size: 1.125em
 			font-weight: bold
-
+	+media-breakpoint-down(lg)
+		.price-wrap
+			.price
+				font-size: 1em
+	+media-breakpoint-down(xs)
+		.flex
+			display: block
+		.description
+			margin-bottom: 15px
+		.price-wrap
+			margin-bottom: 10px
 .related
 	padding: 60px 0 0
 	background-position: top center
@@ -452,6 +491,12 @@ p
 		padding-top: 10px
 		img
 			margin: 0 auto
+	+media-breakpoint-down(lg)
+		.arrangement
+			padding-bottom: 80px
++media-breakpoint-down(sm)
+	.related-item
+		margin-bottom: 30px
 .home-gallery
 	padding: 60px 0
 
@@ -489,15 +534,15 @@ p
 		position: relative
 		padding: 12px
 		box-shadow: 18px 18px 35px rgba(#000, .23)
-		&:before
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background-image: url(../img/ramka.png)
-			background-size: 100% 100%
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
+		// 	background-image: url(../img/ramka.png)
+		// 	background-size: 100% 100%
 
 .feedback
 	padding: 170px 0 110px
@@ -521,7 +566,8 @@ p
 	.contact
 		.h6
 			font-size: 1.5em
-
+	+media-breakpoint-down(xs)
+		padding: 15px 0 50px
 .map
 	height: 560px
 	position: relative
@@ -587,7 +633,12 @@ p
 	.phone
 		a 
 			font-size: 1.25em
-
+	+media-breakpoint-down(lg)
+		.copyright
+			max-width: 500px
+	+media-breakpoint-down(sm)
+		.flex
+			flex-wrap: wrap
 .project-info
 	p
 		font-size: .875em
@@ -734,8 +785,7 @@ p
 			box-shadow: 0 0px 0 #DBBC2A
 	&.btn-lg
 		font-size: 1.125em
-		padding: 14px 30px
-		min-width: 260px
+		padding: 14px 40px
 		border-radius: 29px
 		&:after, &:before
 			border-radius: 29px
@@ -823,6 +873,7 @@ p
 form
 	.h4
 		line-height: 1.2
+		margin-bottom: 30px
 .contact-form
 	form
 		position: relative
@@ -887,7 +938,8 @@ form
 	+media-breakpoint-down(md)
 		padding: 15px 40px
 		margin-bottom: 0
-	+media-breakpoint-down(xs)	
+	+media-breakpoint-down(xs)
+		padding: 15px 20px
 		&:before, &:after
 			display: none
 		.form-control
@@ -1038,7 +1090,7 @@ select
 .white-popup-block
 	max-width: 1170px
 	margin: 40px auto
-	padding: 30px
+	padding: 35px 30px
 	position: relative
 	background: #fff
 	form

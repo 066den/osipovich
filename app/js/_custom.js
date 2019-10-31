@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		alignTop: true,
 		overflowY: 'scroll',
 		closeOnBgClick: false,
-		showCloseBtn
 		callbacks: {
 			ajaxContentAdded: function() {
 	  		$(this.content).find('.project-carousel').owlCarousel({
@@ -49,7 +48,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 	  },
 	})
-	
+
+	$('.popup-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		mainClass: 'mfp-zoom-in'
+	})
 
 });
 
