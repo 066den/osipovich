@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Shape_7_copy_3_1_"
+   width="25"
+   height="23"
+   viewBox="0 0 25 23"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="square.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1651"
+     inkscape:window-height="872"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="10.26087"
+     inkscape:cx="12.5"
+     inkscape:cy="11.5"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Shape_7_copy_3_1_" />
+  <style
+     id="style3">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}</style>
+  <path
+     class="st0"
+     d="M23.48 4.59L19.55.663l-.647-.647-.647.647-16.47 16.47-.646.647.647.647 3.925 3.926.647.647.647-.647 16.468-16.47.647-.646-.646-.647zM6.36 21.707L2.436 17.78l1.024-1.024 1.482 1.483.404-.406-1.483-1.483.522-.522.404-.404.52-.523 1.483 1.484.407-.404-1.482-1.482.522-.523.404-.404.523-.522L8.65 14.53l.403-.403-1.483-1.482.522-.522.404-.405.522-.522 1.483 1.482.405-.404-1.482-1.483.522-.52.404-.405.522-.522 1.483 1.482.404-.404-1.484-1.48.522-.524.404-.404.522-.522 1.482 1.482.404-.404-1.48-1.482.522-.522.404-.405.522-.523L16.06 7.12l.405-.405-1.483-1.482 3.922-3.922L22.83 5.24 6.362 21.708zM17.826 4.355c-.507.507-.507 1.332 0 1.84.507.507 1.332.506 1.84 0 .506-.508.506-1.333 0-1.84-.507-.506-1.333-.507-1.84 0zM19.18 5.71c-.24.24-.63.24-.87 0s-.24-.63 0-.87.63-.24.87 0 .24.63 0 .87z"
+     id="Shape_7_copy_3"
+     style="fill:#000000" />
+</svg>

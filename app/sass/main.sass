@@ -62,7 +62,7 @@ h4,.h4
 	font-family: GothamPro
 	font-weight: bold
 	font-size: 1.5em
-
+	line-height: 1.2
 h5,.h5
 	font-size: 1.25em
 
@@ -266,7 +266,7 @@ p
 	position: relative	
 .advantages
 	background-color: #EBF6FA
-	padding-bottom: 160px
+	padding-bottom: 150px
 	position: relative
 	z-index: -1
 	margin-top: -175px
@@ -345,14 +345,20 @@ p
 			left: 50%
 			+transform(-50%, 0)
 .triple-form
+	position: relative
 	background-repeat: no-repeat
 	background-position: top center
 	//background-color: #ebf6fa
-	margin-top: -490px
+	margin-top: -488px
 	padding-top: 410px
 	padding-bottom: 120px
+.video-block
+	position: absolute
+	top: 25px
+	left: 50%
+	+transform(-50%, 0)
+	text-align: center
 .products
-	
 	.thumb
 		position: relative
 		box-shadow: 0 5px 5px rgba(#0a0b0c, .09)
@@ -426,9 +432,8 @@ p
 
 .related
 	padding: 60px 0 0
-	
-	.related-wrap
-		
+	background-position: top center
+	background-repeat: no-repeat
 	.thumb
 		box-shadow: 0 5px 5px rgba(#000, .09)
 	.item-content
@@ -442,6 +447,11 @@ p
 		text-decoration: underline
 		line-height: 1.2
 		min-height: 38px
+	.arrangement
+		padding-bottom: 145px
+		padding-top: 10px
+		img
+			margin: 0 auto
 .home-gallery
 	padding: 60px 0
 
@@ -578,6 +588,94 @@ p
 		a 
 			font-size: 1.25em
 
+.project-info
+	p
+		font-size: .875em
+	.param
+		position: relative
+	.value
+		margin-top: 8px
+		font-weight: bold
+	.dotted
+		border-bottom: 2px dotted #303133
+		&:after
+			content: '\00A0'
+			display: inline
+		span
+			background-color: #fff
+			position: absolute
+			margin-top: 8px
+			padding-right: 5px
+	.attributes
+		margin-bottom: 30px
+		font-size: .875em
+	.price-wrap
+		padding-right: 30px
+	.options
+		padding: 30px 0 10px
+	hr
+		margin-bottom: 30px
+	.item-param
+		img
+			margin-right: 5px
+	
+
+.project-carousel
+	margin-bottom: 30px
+	position: relative
+
+.owl-carousel
+	.owl-nav
+		position: absolute
+		width: 50%
+		top: 50%
+		left: 50%
+		+transform(-50%, -50%)
+		display: flex
+		justify-content: space-between
+		&.disabled
+			display: none	
+		+media-breakpoint-down(xl)
+			width: 100%
+		button
+			width: 80px
+			height: 80px
+			&:hover
+				.arrow-left-lg,.arrow-right-lg
+					&:before, &:after
+						background: #000
+						opacity: 1
+.arrow-right-lg, .arrow-left-lg
+	display: inline-block
+	position: relative
+	width: 40px
+	height: 3px
+	background: transparent
+	border-radius: 2px
+	vertical-align: middle
+	&:before,&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		width: 100%
+		height: 3px
+		left: 0
+		background: #fff
+		opacity: .8
+		border-radius: 3px
+		transition: $trans3
+.arrow-right-lg
+	&:before
+		transform: rotate(-60deg) translate3d(-10px,16px,0)
+	&:after
+		transform: rotate(60deg) translate3d(-10px,-16px,0)
+.arrow-left-lg
+	&:before
+		transform: rotate(60deg) translate3d(10px,16px,0)
+	&:after
+		transform: rotate(-60deg) translate3d(10px,-16px,0)
+
+
 //BUTTON//
 .btn
 	display: inline-block
@@ -595,7 +693,7 @@ p
 	transition: $trans3
 	color: $text
 	&.btn-default
-		min-width: 225px
+		//min-width: 225px
 		color: #fff
 		background: linear-gradient(to bottom, #FDD819, #E87B05)
 		position: relative
@@ -622,6 +720,9 @@ p
 			display: inline-block
 			position: relative
 			z-index: 10
+		&.btn-xl
+			min-width: 280px
+			padding: 20px
 	&:focus, &:hover
 		text-decoration: none
 	&:hover
@@ -631,7 +732,6 @@ p
 		background-color: darken($accent2, 5%)
 		&:after
 			box-shadow: 0 0px 0 #DBBC2A
-	
 	&.btn-lg
 		font-size: 1.125em
 		padding: 14px 30px
@@ -682,6 +782,22 @@ p
 			margin-right: 20px
 		span
 			vertical-align: middle
+	&.btn-play
+		border-radius: 10em
+		padding: 53px
+		margin-bottom: 50px
+		&:after, &:before
+			border-radius: 10em
+		&:after
+			box-shadow: 0 5px 0 #947322
+		i
+			width: 35px
+			height: 35px
+			vertical-align: middle
+			background-image: url(../img/prod-sprite.png)
+			background-repeat: no-repeat
+			background-position: -186px center
+			+transform(4px, 2px)
 .btn-icon
 	display: inline-block
 	padding: 3px

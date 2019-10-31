@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	$('.btn-play').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
 	
 	$('.zoom-gallery').each(function() {
 		$(this).magnificPopup({
@@ -22,19 +30,26 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	})
 
+
 	$('.ajax-popup').magnificPopup({
 		type: 'ajax',
 		alignTop: true,
 		overflowY: 'scroll',
+		closeOnBgClick: false,
+		showCloseBtn
 		callbacks: {
-    	ajaxContentAdded: function() {
-   			$(this.content).find('.project-carousel').owlCarousel({
-					items: 1
+			ajaxContentAdded: function() {
+	  		$(this.content).find('.project-carousel').owlCarousel({
+					items: 1,
+					nav: true,
+					loop: true,
+					navText: ['<span class="arrow-left-lg"></span>','<span class="arrow-right-lg"></span>'],
+					smartSpeed: 500,
 				})
-	
 			}
-    },
-	});
+	  },
+	})
+	
 
 });
 
